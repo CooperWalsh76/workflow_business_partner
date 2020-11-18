@@ -1,0 +1,34 @@
+{
+    "application": {
+        "id": "",
+        "title": "demo.sap.com.Enrich.s4cloudextension",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/Enrich",
+        "appUrl": "#s4cloudextension-Display",
+        "navigationComponentName": "demo.sap.com.Enrich",
+        "intentSemanticObject": "s4cloudextension",
+        "intentAction": "Display",
+        "html5ApplicationName": "s4cloudextension",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "32495f2e-a7ee-432e-bede-720ebc1bb017"
+        ],
+        "contentPackages": [
+            "4891f4ce-737c-4ac5-a239-2ec1fc0afcbb"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "SCPWorkflow",
+        "subtitle": "Manage workflow",
+        "searchKeywords": "SCPWorkflow,Manage workflow",
+        "displayIconUrl": "sap-icon://accept",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}

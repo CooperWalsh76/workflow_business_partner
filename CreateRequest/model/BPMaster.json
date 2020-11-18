@@ -1,0 +1,45 @@
+{"BPRequest":
+{
+"BusinessPartnerName":"Future Consulting",
+"BusinessPartnerFullName":"Future Consulting GmbH",
+"BusinessPartnerGrouping":"",
+"BusinessPartnerCategory" : "2",
+"OrganizationBPName1" : "Future",
+"SearchTerm1":"",
+
+"to_BusinessPartnerAddress" : [ {
+"Country" : "DE",
+"StreetName" : "Dietmar-Hopp-Allee 16",
+"PostalCode" : "69190",
+"CityName" : "Walldorf",
+"to_AddressUsage" : [ {
+"AddressUsage" : "XXDEFAULT" } ]
+
+} ],
+"to_BusinessPartnerTax": [ {
+"BPTaxType":"DE0",
+"BPTaxNumber":"DE012345678",
+"AuthorizationGroup":"GRP1"
+
+}] ,
+"to_BusinessPartnerBank": [{
+ 
+                    "BankAccount":"1233453",
+                "BankAccountReferenceText":"",
+                
+                "CityName":"60254 Frankfurt, Main",
+                "AuthorizationGroup":"",
+                "BankIdentification":"0001",
+                "BankCountryKey":"DE",
+                "BankName":"General Bank",
+                "BankNumber":"50070010",
+                "SWIFTCode":"DEUTDEFFXXX",
+                "BankControlKey":"",
+                "BankAccountHolderName":"",
+                "BankAccountName":""
+
+}] 
+
+}
+}
+

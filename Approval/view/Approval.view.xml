@@ -1,0 +1,191 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"  xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" controllerName="demo.sap.com.Approval.controller.Approval" displayBlock="true">
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>title}" showSubHeader="false" showHeader="false" showFooter="false">
+					<content>
+					<l:VerticalLayout width="100%" id="__layout0">
+						<l:content>
+							<ObjectHeader title="{/context/task/Title}" titleActive="false" id="__header0">
+								<attributes>
+									<ObjectAttribute title="{i18n>createdOn}" text="{/task/CreatedOn}"/>
+									<ObjectAttribute title="{i18n>description}" text="{/task/Description}"/>
+								</attributes>
+								<statuses>
+									<ObjectStatus text="{/task/Status}" state="None"/>
+									<ObjectStatus text="{/task/Priority}" state="{/task/PriorityState}"/>
+								</statuses>
+							</ObjectHeader>
+							<l:HorizontalLayout id="__layout1">
+								<l:content>
+									<IconTabBar selectedKey="__filter0" id="__bar0">
+										<items>
+											<IconTabFilter icon="sap-icon://hint" id="__filter0">
+												<content>
+													<l:HorizontalLayout id="hLayout11">
+														<FlexBox width="100%" id="__box0">
+															<items>
+																<l:VerticalLayout id="hLayout12">
+																	<HBox width="100%" id="__hbox0">
+																		<l:HorizontalLayout id="hLayoutJob1">
+																			<f:Form >
+																				<f:layout>
+																					<f:GridLayout singleColumn="true"/>
+																				</f:layout>
+																				<f:FormContainer expanded="true" title="Basic Data" expandable="false">
+																					<f:formElements>
+																						<f:FormElement label="{i18n>BusinessPartner}">
+																							<Text text="{/BP/d/BusinessPartner}"/>
+																						</f:FormElement>
+																						<f:FormElement label="{i18n>BusinessPartnerName}">
+																							<Text text="{/BPRequest/BusinessPartnerName}"/>
+																						</f:FormElement>
+																						<f:FormElement label="{i18n>BusinessPartnerFullName}">
+																							<Text text="{/BPRequest/BusinessPartnerFullName}"/>
+																						</f:FormElement>
+																					
+																						<f:FormElement label="{i18n>BusinessPartnerGrouping}">
+																							<Text text="{/BPRequest/BusinessPartnerGrouping}"/>
+																						</f:FormElement>
+																						<f:FormElement label="{i18n>BusinessPartnerCategory}">
+																							<Text text="{/BPRequest/BusinessPartnerCategory}"/>
+																						</f:FormElement>
+																						<f:FormElement label="{i18n>OrganizationBPName1}">
+																							<Text text="{/BPRequest/OrganizationBPName1}"/>
+																						</f:FormElement>
+																						
+																						<!--<f:FormElement label="{i18n>email}">
+																							<Link text="{/context/empData/User/email}" press="handleSendMail"/>
+																						</f:FormElement>-->
+																					</f:formElements>
+																				</f:FormContainer>
+																			</f:Form>
+																		</l:HorizontalLayout>
+																		<VBox id="VBoxJob1">
+																			<l:HorizontalLayout id="hLayoutJob2">
+																				<f:Form >
+																					<f:layout>
+																						<f:GridLayout singleColumn="true"/>
+																					</f:layout>
+																					<f:FormContainer expanded="true" title="Address" expandable="false">
+																						<f:formElements>
+																							<f:FormElement label="{i18n>streetName}">
+																								<Text text="{/Address/StreetName}"/>
+																							</f:FormElement>
+																							<!--<f:FormElement label="{i18n>division}">
+																								<Text text="{/context/empData/User/division}"/>
+																							</f:FormElement>-->
+																							<f:FormElement label="{i18n>city}">
+																								<Text text="{/Address/CityName}"/>
+																							</f:FormElement>
+																							<f:FormElement label="{i18n>postalCode}">
+																								<Text text="{/Address/PostalCode}"/>
+																							</f:FormElement>
+																								<f:FormElement label="{i18n>country}">
+																								<Text text="{/Address/Country}"/>
+																							</f:FormElement>
+																							
+																						</f:formElements>
+																					</f:FormContainer>
+																				</f:Form>
+																			</l:HorizontalLayout>
+																		</VBox>
+																	</HBox>
+																
+																</l:VerticalLayout>
+															</items>
+														</FlexBox>
+													</l:HorizontalLayout>
+												</content>
+											</IconTabFilter>
+											
+											
+											<IconTabFilter icon="sap-icon://customer-financial-fact-sheet" id="__filter1" visible="true">
+												<content>
+													<l:HorizontalLayout id="hLayout21">
+														<FlexBox width="100%" id="__box1">
+															<items>
+																<l:VerticalLayout id="hLayout22">
+																	<HBox width="100%" id="__hbox1">
+																		<l:HorizontalLayout id="hLayoutJob21">
+																			<f:Form >
+																				<f:layout>
+																					<f:GridLayout singleColumn="true"/>
+																				</f:layout>
+																				<f:FormContainer expanded="true" title="Tax Data" expandable="false">
+																					<f:formElements>
+																						<f:FormElement label="Tax Type">
+																							<Text text="{/Tax/BPTaxType}"/>
+																						</f:FormElement>
+																						<f:FormElement label="Tax Number">
+																							<Text text="{/Tax/BPTaxNumber}"/>
+																						</f:FormElement>
+																					    <f:FormElement label="AuthorizationGroup">
+																							<Text text="{/Tax/AuthorizationGroup}"/>
+																						</f:FormElement>
+																					
+																					
+																					</f:formElements>
+																				</f:FormContainer>
+																			</f:Form>
+																		</l:HorizontalLayout>
+																		
+																	</HBox>
+																
+																</l:VerticalLayout>
+															</items>
+														</FlexBox>
+													</l:HorizontalLayout>
+												</content>
+											</IconTabFilter>
+												<IconTabFilter icon="sap-icon://simple-payment" id="bank">
+										   			<content>
+													<l:HorizontalLayout id="hLayout23">
+														<FlexBox width="100%" id="__box2">
+															<items>
+																<l:VerticalLayout id="vLayout23">
+																	<HBox width="100%" id="__hbox2">
+																		<l:HorizontalLayout id="hLayoutJob23">
+																			<f:Form >
+																				<f:layout>
+																					<f:GridLayout singleColumn="true"/>
+																				</f:layout>
+																				<f:FormContainer expanded="true" title="Bank Data" expandable="false">
+																					<f:formElements>
+																						<f:FormElement label="Bank Name">
+																							<Text text="{/Bank/BankName}"/>
+																						</f:FormElement>
+																						<f:FormElement label="Bank Number">
+																							<Text text="{/Bank/BankNumber}"/>
+																						</f:FormElement>
+																					    <f:FormElement label="SWIFTCode">
+																							<Text text="{/Bank/SWIFTCode}" />
+																						</f:FormElement>
+																						 <f:FormElement label="BankCountry">
+																							<Text text="{/Bank/BankCountryKey}"/>
+																						</f:FormElement>
+																					
+																					
+																					</f:formElements>
+																				</f:FormContainer>
+																			</f:Form>
+																		</l:HorizontalLayout>
+																		
+																	</HBox>
+																
+																</l:VerticalLayout>
+															</items>
+														</FlexBox>
+													</l:HorizontalLayout>
+												</content>
+										   </IconTabFilter>
+										</items>
+									</IconTabBar>
+								</l:content>
+							</l:HorizontalLayout>
+						</l:content>
+					</l:VerticalLayout>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
